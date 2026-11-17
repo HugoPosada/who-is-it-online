@@ -76,6 +76,7 @@ const CHARACTERS_DB = [
     ]
   },
 
+
   // ================= DEPORTE =================
   {
     name: "Muhammad Ali",
@@ -119,6 +120,69 @@ const CHARACTERS_DB = [
       "Es el máximo ídolo histórico del fútbol brasileño, apodado 'O Rei'."
     ]
   },
+  {
+  "name": "Usain Bolt",
+  "aliases": ["usain bolt", "bolt"],
+  "nickname": "El Hombre más Rápido del Mundo",
+  "years": "1986 Presente",
+  "role": "Atleta de Velocidad",
+  "category": "deporte",
+  "image": "img/usain_bolt.jpg",
+  "stats": [
+    { "value": "9.58", "label": "RÉCORD MUNDIAL 100M (SEG)" },
+    { "value": "8", "label": "MEDALLAS DE ORO OLÍMPICAS" }
+  ],
+  "bio": "Ex velocista jamaicano, considerado el hombre más rápido de todos los tiempos y leyenda del atletismo mundial.",
+  "clues": [
+    "Posee los récords mundiales vigentes en las pruebas de 100 y 200 metros lisos.",
+    "Su celebración característica imitando a un rayo cruzando el cielo se convirtió en un símbolo global.",
+    "Ganó ocho medallas de oro olímpicas a lo largo de su exitosa carrera en Pekín, Londres y Río.",
+    "Tras retirarse del atletismo profesional, intentó brevemente incursionar de manera formal en el fútbol profesional.",
+    "Es originario de Jamaica y dominó la velocidad internacional durante más de una década."
+  ]
+},
+{
+  "name": "Tom Brady",
+  "aliases": ["tom brady", "brady"],
+  "nickname": "The GOAT de la NFL",
+  "years": "1977 Presente",
+  "role": "Mariscal de Campo",
+  "category": "deporte",
+  "image": "img/tom_brady.jpg",
+  "stats": [
+    { "value": "7", "label": "SUPER BOWLS GANADOS" },
+    { "value": "23", "label": "TEMPORADAS EN LA NFL" }
+  ],
+  "bio": "Exjugador estadounidense de fútbol americano, ampliamente considerado el mejor mariscal de campo de la historia.",
+  "clues": [
+    "Fue seleccionado en el Draft de la NFL en una posición muy baja (puesto 199 de la sexta ronda).",
+    "Ganó más anillos de campeonato de la Super Bowl que cualquier franquicia completa en toda la historia de la liga.",
+    "Jugó la inmensa mayoría de su carrera profesional vistiendo el uniforme de los New England Patriots.",
+    "Ganó un título de la NFL adicionales con los Tampa Bay Buccaneers ya en su etapa veterana.",
+    "Su número dorsal histórico fue el 12."
+  ]
+},
+{
+  "name": "LeBron James",
+  "aliases": ["lebron james", "lebron", "king james"],
+  "nickname": "King James",
+  "years": "1984 Presente",
+  "role": "Jugador de Baloncesto",
+  "category": "deporte",
+  "image": "img/lebron.jpg",
+  "stats": [
+    { "value": "4", "label": "ANILLOS DE LA NBA" },
+    { "value": "40000+", "label": "PUNTOS ANOTADOS" }
+  ],
+  "bio": "Jugador profesional de baloncesto estadounidense, máximo anotador histórico de la temporada regular de la NBA.",
+  "clues": [
+    "Llegó directamente a la NBA desde el instituto (high school) siendo considerado el 'Chosen One' de la portada de Sports Illustrated.",
+    "Es el máximo anotador histórico de toda la NBA, superando la marca milenaria de Kareem Abdul-Jabbar.",
+    "Ha ganado campeonatos de la NBA con tres franquicias distintas: Miami Heat, Cleveland Cavaliers y LA Lakers.",
+    "Ha disputado diez finales de la NBA a lo largo de más de dos décadas de carrera dominante.",
+    "Su número de dorsal tradicional alterna entre el 23 y el 6."
+  ]
+},
 
   // ================= CIENCIA =================
   {
@@ -163,7 +227,69 @@ const CHARACTERS_DB = [
       "Inventó la bobina que lleva su nombre y revolucionó la electricidad con la corriente alterna."
     ]
   },
-
+  {
+  "name": "Isaac Newton",
+  "aliases": ["isaac newton", "newton"],
+  "nickname": "El Padre de la Física Clásica",
+  "years": "1643 1727",
+  "role": "Físico y Matemático",
+  "category": "ciencia",
+  "image": "img/isaac.jpg",
+  "stats": [
+    { "value": "3", "label": "LEYES DEL MOVIMIENTO" },
+    { "value": "1687", "label": "PUBLICACIÓN PHILOSOPHIAE NATURALIS" }
+  ],
+  "bio": "Físico, teólogo, inventor y matemático inglés, autor de los Philosophiae naturalis principia mathematica.",
+  "clues": [
+    "Formuló las tres leyes fundamentales del movimiento y la ley de la gravitación universal tras ver caer una manzana.",
+    "Inventó de manera independiente el cálculo matemático infinitesimal (fluxiones) para resolver problemas físicos.",
+    "Construyó el primer telescopio reflector funcional de la historia utilizando espejos curvos.",
+    "Demostró que la luz blanca está compuesta por un espectro de todos los colores del arcoíris al pasarla por un prisma.",
+    "Ocupó el cargo de director de la Casa de la Moneda real en Inglaterra."
+  ]
+},
+{
+  "name": "Galileo Galilei",
+  "aliases": ["galileo", "galileo galilei"],
+  "nickname": "El Padre de la Astronomía Moderna",
+  "years": "1564 1642",
+  "role": "Astrónomo y físico",
+  "category": "ciencia",
+  "image": "img/galileo.jpg",
+  "stats": [
+    { "value": "4", "label": "LUNAS DE JÚPITER DESCUBIERTAS" },
+    { "value": "1609", "label": "MEJORA DEL TELESCOPIO" }
+  ],
+  "bio": "Astrónomo, filósofo y físico italiano cuyas investigaciones sentaron las bases de la revolución científica.",
+  "clues": [
+    "Mejoró notablemente el diseño del telescopio holandés para observar el cielo nocturno con fines científicos.",
+    "Descubrió las cuatro lunas principales de Júpiter (llamadas lunas galileanas en su honor) y las fases de Venus.",
+    "Defendió firmemente el modelo heliocéntrico de Copérnico, lo que le trajo graves conflictos con la Inquisición romana.",
+    "Pronunció su famosa frase 'Y sin embargo, se mueve' tras ser obligado a retractarse de sus posturas astronómicas.",
+    "Realizó experimentos sobre la caída libre de los cuerpos desde la torre inclinada de Pisa."
+  ]
+},
+{
+  "name": "Alexander Fleming",
+  "aliases": ["alexander fleming", "fleming"],
+  "nickname": "El Descubridor de la Penicilina",
+  "years": "1881 1955",
+  "role": "Médico y Bacteriólogo",
+  "category": "ciencia",
+  "image": "img/alexander.jpg",
+  "stats": [
+    { "value": "1928", "label": "DESCUBRIMIENTO DE LA PENICILINA" },
+    { "value": "1945", "label": "PREMIO NOBEL DE MEDICINA" }
+  ],
+  "bio": "Médico y microbiólogo británico famoso por descubrir la enzima lisozima y el primer antibiótico de la historia.",
+  "clues": [
+    "Descubrió la penicilina por un golpe de suerte en 1928 al contaminarse un cultivo de bacterias con un hongo en su laboratorio.",
+    "Observó que el hongo del género *Penicillium* destruía eficazmente las bacterias circundantes en la placa de Petri.",
+    "Recibió el Premio Nobel de Medicina en 1945 junto a Howard Florey y Ernst Chain por desarrollar la producción masiva del antibiótico.",
+    "Saló millones de vidas humanas en los campos de batalla de la Segunda Guerra Mundial y en todo el mundo.",
+    "Es originario de Escocia y su invención marcó el inicio de la era moderna de los antibióticos."
+  ]
+},
   // ================= HISTORIA =================
   {
     name: "Cleopatra",
@@ -207,6 +333,48 @@ const CHARACTERS_DB = [
       "Se autocoronó Emperador de Francia en 1804 y es famoso por llevar la mano en el chaleco."
     ]
   },
+  {
+  "name": "Abraham Lincoln",
+  "aliases": ["abraham lincoln", "lincoln"],
+  "nickname": "El Presidente Emancipador",
+  "years": "1809 1865",
+  "role": "Presidente de EE.UU.",
+  "category": "historia",
+  "image": "img/abraham.webp",
+  "stats": [
+    { "value": "16", "label": "PRESIDENTE DE EE.UU." },
+    { "value": "1863", "label": "PROCLAMA DE EMANCIPACIÓN" }
+  ],
+  "bio": "Político y abogado estadounidense, decimosexto presidente de los Estados Unidos durante la Guerra de Secesión.",
+  "clues": [
+    "Creció en una cabaña de madera en la frontera y era un autodidacta consumado que estudiaba derecho leyendo libros prestados.",
+    "Lideró a la nación norteamericana durante su convulsa Guerra Civil, preservando la Unión.",
+    "Firmó la histórica Proclamación de Emancipación que declaró la libertad de los esclavos en los estados confederados.",
+    "Pronunció el célebre y brevísimo Discurso de Gettysburg en honor a los caídos en combate.",
+    "Fue asesinado en el Teatro Ford por el actor John Wilkes Booth pocos días después de terminar la guerra."
+  ]
+},
+{
+  "name": "Nelson Mandela",
+  "aliases": ["nelson mandela", "mandela"],
+  "nickname": "Madiba",
+  "years": "1918 2013",
+  "role": "Activista y Presidente",
+  "category": "historia",
+  "image": "img/nelson.jpg",
+  "stats": [
+    { "value": "27", "label": "AÑOS EN PRISIÓN" },
+    { "value": "1993", "label": "PREMIO NOBEL DE LA PAZ" }
+  ],
+  "bio": "Activista contra el apartheid, abogado y político sudafricano que fungió como presidente de su país.",
+  "clues": [
+    "Pasó 27 años encarcelado por su férrea oposición al régimen racista del apartheid, principalmente en la isla Robben.",
+    "Tras su liberación en 1990, negoció pacíficamente la transición democrática multirracial en Sudáfrica.",
+    "Recibió el Premio Nobel de la Paz en 1993 junto al presidente Frederik Willem de Klerk.",
+    "Se convirtió en el primer presidente negro de Sudáfrica en las elecciones democráticas de 1994.",
+    "Es ampliamente conocido y respetado en su país por su clan tradicional bajo el nombre de *Madiba*."
+  ]
+},
 
   // ================= ANIME =================
   {
@@ -314,6 +482,111 @@ const CHARACTERS_DB = [
       "Usó el alias 'Kira' para eliminar criminales y convertirse en el dios de un nuevo mundo."
     ]
   },
+  {
+  "name": "Eren Yeager",
+  "aliases": ["eren", "eren yeager"],
+  "nickname": "El Titán de Ataque",
+  "years": "2009 2021",
+  "role": "Protagonista / Antihéroe",
+  "category": "anime",
+  "image": "img/eren.jpg",
+  "stats": [
+    { "value": "15", "label": "METROS DE ALTURA (TITÁN)" },
+    { "value": "1", "label": "RUMOR DE LA TIERRA" }
+  ],
+  "bio": "Protagonista de Shingeki no Kyojin (Attack on Titan). Juró exterminar a los titanes tras la destrucción de su pueblo.",
+  "clues": [
+     "Su mentalidad evoluciona drásticamente de un joven lleno de ira a un estratega implacable dispuesto a todo por su libertad.",
+     "Vio morir trágicamente a su madre devorada por un titán en la caída del muro María durante su infancia.",
+     "Posee la habilidad heredada de transformarse físicamente en el Titán de Ataque y el Titán Fundador.",
+     "Es el instigador del devastador evento conocido como el Retumbar de la Tierra.",
+     "Su inseparable bufanda roja regalada por Mikasa es uno de los símbolos más recordados de la serie."
+  ]
+},
+{
+  "name": "Satoru Gojo",
+  "aliases": ["gojo", "satoru gojo"],
+  "nickname": "El Hechicero Más Fuerte",
+  "years": "2018 Presente",
+  "role": "Hechicero de Jujutsu",
+  "category": "anime",
+  "image": "img/gojo.jpg",
+  "stats": [
+    { "value": "6", "label": "OJOS (ROKUGAN)" },
+    { "value": "1", "label": "INFINITO PERSONAL" }
+  ],
+  "bio": "Profesor en la Escuela Técnica de Magia Metropolitana de Tokio en Jujutsu Kaisen, reconocido por su poder abrumador.",
+  "clues": [
+    "Tiene una personalidad sumamente juguetona, arrogante y despreocupada a pesar de sus inmensas responsabilidades.",
+    "Suele cubrirse el rostro con una venda negra o gafas oscuras la mayor parte del tiempo escolar.",
+    "Posee unos llamativos ojos azules cristalinos provistos de la técnica heredada de los 'Seis Ojos'.",
+    "Su técnica maldita manipula el concepto matemático del infinito, haciendo físicamente imposible que lo toquen.",
+    "Es considerado sin discusión el hechicero vivo más poderoso de toda la era moderna.",
+  ]
+},
+{
+  "name": "Itachi Uchiha",
+  "aliases": ["itachi", "itachi uchiha"],
+  "nickname": "El Genio del clan Uchiha",
+  "years": "1999 2014",
+  "role": "Ninja Renegado",
+  "category": "anime",
+  "image": "img/itachi.jpg",
+  "stats": [
+    { "value": "13", "label": "EDAD COMO CAPITÁN ANBU" },
+    { "value": "MS", "label": "MANGEKYO SHARINGAN" }
+  ],
+  "bio": "Personaje crucial de Naruto. Hermano mayor de Sasuke, obligado a cargar con el destino trágico de su clan.",
+  "clues": [
+    "Desperto un talento prodigioso desde su infancia, convirtiéndose en capitán de la fuerza especial ANBU siendo un niño.",
+    "Aniquiló casi por completo a su propio clan Uchiha en una sola noche para evitar una guerra civil en la Hoja.",
+    "Se unió a la organización criminal Akatsuki mientras actuaba secretamente como espía y protector de Konoha.",
+    "Domina técnicas oculares definitivas como el Amaterasu, el Tsukuyomi y el Susanoo.",
+    "Su trágica verdad secreta es uno de los giros argumentales más emotivos del anime."
+  ]
+},
+{
+  "name": "Tanjiro Kamado",
+  "aliases": ["tanjiro", "tanjiro kamado"],
+  "nickname": "El Cazador de Demonios",
+  "years": "2016 Presente",
+  "role": "Cazador de Demonios",
+  "category": "anime",
+  "image": "img/tanjiro.webp",
+  "stats": [
+    { "value": "1", "label": "HERMANA DEMONIO (NEZUKO)" },
+    { "value": "13", "label": "POSTURAS DE RESPIRACIÓN" }
+  ],
+  "bio": "Protagonista de Kimetsu no Yaiba (Demon Slayer). Joven bondadoso que busca curar a su hermana convertida en demonio.",
+  "clues": [
+    "Tiene una cicatriz distintiva en la frente que cambió de forma tras proteger a su hermano menor de un accidente.",
+    "Posee un sentido del olfato ultrasensible capaz de detectar emociones y rastrear enemigos o trampas.",
+    "Combina el estilo clásico de la Respiración del Agua con la ancestral y heredada Danza del Dios del Fuego.",
+    "Lleva siempre a su hermana menor Nezuko protegida dentro de una caja de madera a su espalda.",
+    "Es reconocido por su enorme empatía incluso hacia los demonios derrotados."
+  ]
+},
+{
+  "name": "Levi Ackerman",
+  "aliases": ["levi", "capitan levi"],
+  "nickname": "El Soldado Más Fuerte de la Humanidad",
+  "years": "2009 2021",
+  "role": "Capitán del Cuerpo de Exploración",
+  "category": "anime",
+  "image": "img/levi.jpg",
+  "stats": [
+    { "value": "160", "label": "CENTÍMETROS DE ESTATURA" },
+    { "value": "1", "label": "OBSESIÓN CON LA LIMPIEZA" }
+  ],
+  "bio": "Capitán de la Legión de Reconocimiento en Shingeki no Kyojin, famoso por sus habilidades letales y obsesión por el orden.",
+  "clues": [
+    "Tiene una notoria y extrema obsesión patológica por la limpieza impecable y el orden absoluto en los cuarteles.",
+    "Su baja estatura contrasta fuertemente con su temible reputación militar en el campo de batalla.",
+    "Maneja los equipos de maniobras tridimensionales con una velocidad y agilidad casi sobrehumanas en forma de torbellino.",
+    "Proviene de los suburbios subterráneos y es descendiente directo del poderoso clan Ackerman.",
+    "Es aclamado unánimemente como el soldado más fuerte de la humanidad en el combate contra los titanes.",
+  ]
+},
 
   // ================= VIDEOJUEGOS =================
   {
@@ -338,7 +611,7 @@ const CHARACTERS_DB = [
     ]
   },
   {
-    name: "Mario",
+    name: "Mario Bros",
     aliases: ["super mario", "mario bros"],
     nickname: "El Héroe del Reino Champiñón",
     years: "1981 – Presente",
@@ -372,10 +645,10 @@ const CHARACTERS_DB = [
     ],
     bio: "Protagonista de The Witcher. Cazador de monstruos mutado genéticamente que recorre el Continente buscando a Ciri.",
     clues: [
-      "Soporta mutaciones alquímicas que dejaron su cabello completamente blanco y sus ojos felinos.",
       "Es conocido con el infame apodo de 'El Carnicero de Blaviken'.",
-      "Siempre lleva dos espadas a la espalda: una de acero para humanos y otra de plata para monstruos.",
-      "Tiene un vínculo de destino con Ciri, Yennefer y su fiel yegua Sardinilla.",
+      "Soporta mutaciones que dejaron su cabello blanco y sus ojos felinos.",
+      "Siempre lleva dos espadas: acero para humanos y plata para monstruos.",
+      "Tiene un vínculo de destino con Ciri, Yennefer y su yegua Sardinilla.",
       "Es el brujo protagonista de la trilogía de videojuegos The Witcher."
     ]
   },
@@ -420,7 +693,49 @@ const CHARACTERS_DB = [
       "Sus armas clásicas son dos pistolas gemelas y un arco compuesto en su trilogía moderna.",
       "Es la famosa arqueóloga británica protagonista de la saga Tomb Raider."
     ]
-  }
+  },
+  {
+  "name": "Arthur Morgan",
+  "aliases": ["arthur", "arthur morgan"],
+  "nickname": "El Forajido Redimido",
+  "years": "2018",
+  "role": "Protagonista de Red Dead",
+  "category": "videojuegos",
+  "image": "img/arthur.jpg",
+  "stats": [
+    { value: "1899", "label": "AÑO DE LAHISTORIA" },
+    { value: "1", "label": "DIARIO ILUSTRADO A MANO" }
+  ],
+   bio: "Protagonista principal de Red Dead Redemption 2. Mano derecha de Dutch van der Linde en su banda de forajidos.",
+   clues: [
+    "Su caballo fiel le acompaña a lo largo de todo el mapa abierto por los vastos territorios del oeste americano.",
+    "Su historia está marcada por el ocaso de la era de los forajidos a finales del siglo XIX.",
+    "Lleva siempre consigo un diario personal de cuero donde plasma sus reflexiones diarias y dibuja animales y paisajes.",
+    "Es un vaquero rudo y leal que encuentra su redención personal ayudando a los demás hacia el final de sus días.",
+    "Es un experto pistolero capaz de activar el modo de disparo rápido 'Dead Eye' para abatir múltiples blancos.",
+  ]
+},
+{
+  "name": "Ezio Auditore",
+  "aliases": ["ezio", "ezio auditore da firenze"],
+  "nickname": "El Asesino del Renacimiento",
+  "years": "2009 Presente",
+  "role": "Maestro Asesino",
+  "category": "videojuegos",
+  "image": "img/ezio.jpg",
+  "stats": [
+    { "value": "3", "label": "JUEGOS DE SU TRILOGÍA" },
+    { "value": "1503", "label": "ÉPOCA RENACENTISTA" }
+  ],
+  "bio": "Protagonista central de la saga Assassin's Creed II, Brotherhood y Revelations. Maestro asesino en la Italia renacentista.",
+  "clues": [
+    "Proviene de una familia noble de Florencia antes de descubrir su legado secreto en la hermandad de asesinos.",
+    "Utiliza hojas ocultas retráctiles en ambas muñecas y capa con capucha blanca como uniforme distintivo.",
+    "Interactúa a lo largo de su aventura con mentes brillantes del Renacimiento como Leonardo da Vinci y Maquiavelo.",
+    "Es el único personaje de la saga en protagonizar tres juegos completos mostrando su evolución desde joven hasta anciano.",
+    "Su famosa frase introductoria de la hermandad es 'Nada es verdad, todo está permitido'."
+  ]
+}
 ];
 
 const POINTS_SCALE = [500, 400, 300, 200, 100];

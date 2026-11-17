@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WHO IS IT? — Duelo Histórico, Anime y Videojuegos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="brand">
+        <div class="brand-emblem">?</div>
+        <span>WHO IS <strong>IT?</strong></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#inicio" class="active">DUELO 1V1</a></li>
+        <li><a href="#categorias">DISCIPLINAS</a></li>
+        <li><a href="#sugerir">SUGERIR</a></li>
+      </ul>
+      <div id="room-pill" class="room-pill hidden">SALA: <strong id="header-room-code">----</strong></div>
+    </div>
+  </nav>
+
+  <!-- SECCIÓN PRINCIPAL: ARENA DE DUELO -->
+  <section id="inicio" class="hero-section">
+    <div class="section-header">
+      <h1 class="editorial-title">DESAFÍA EL <span>CONOCIMIENTO</span></h1>
+      <p class="editorial-subtitle">Duelo en tiempo real contra un amigo o contra la IA. Descubre al personaje oculto antes que tu rival.</p>
+    </div>
+
+    <!-- PANTALLA 1: LOBBY -->
+    <div id="screen-lobby" class="luxury-panel">
+      <div class="player-identity">
+        <label for="player-name">TU NOMBRE EN LA ARENA</label>
+        <input type="text" id="player-name" placeholder="Escribe tu apodo..." maxlength="16" />
+      </div>
+
+      <!-- SELECTOR DE CATEGORÍA CON ANIME Y VIDEOJUEGOS -->
+      <div class="category-bar">
+        <span class="cat-bar-label">ELIGE DISCIPLINA:</span>
+        <div class="category-selector" id="category-selector">
+          <button class="cat-btn active" data-cat="todas">🌍 Todas</button>
+          <button class="cat-btn" data-cat="arte">🎨 Arte</button>
+          <button class="cat-btn" data-cat="deporte">🏆 Deporte</button>
+          <button class="cat-btn" data-cat="ciencia">🧬 Ciencia y Medicina</button>
+          <button class="cat-btn" data-cat="historia">🏛️ Historia</button>
+          <button class="cat-btn" data-cat="anime">⛩️ Anime</button>
+          <button class="cat-btn" data-cat="videojuegos">🎮 Videojuegos</button>
+        </div>
+      </div>
+
+      <div class="lobby-grid-three">
+        <div class="lobby-card highlight-card">
+          <div>
+            <span class="gold-tag">MODO INDIVIDUAL</span>
+            <h3>Duelo vs Rival IA</h3>
+            <p class="muted-text">Compite en tiempo real contra una inteligencia artificial que lee pistas y responde en vivo.</p>
+          </div>
+          <button id="btn-play-bot" class="btn-gold">JUGAR CONTRA LA IA</button>
+        </div>
+
+        <div class="lobby-card">
+          <div>
+            <span class="gold-tag">MULTIJUGADOR ONLINE</span>
+            <h3>Crear Sala Privada</h3>
+            <p class="muted-text">Genera un código de 4 letras para jugar con un amigo desde otro dispositivo.</p>
+          </div>
+          <button id="btn-create-room" class="btn-gold-outline">GENERAR CÓDIGO DE SALA</button>
+        </div>
+
+        <div class="lobby-card">
+          <div>
+            <span class="gold-tag">INVITACIÓN</span>
+            <h3>Unirse a un Duelo</h3>
+            <p class="muted-text">Introduce la clave compartida por tu oponente:</p>
+          </div>
+          <div class="join-actions">
+            <input type="text" id="join-code-input" class="code-input" placeholder="X94B" maxlength="4" />
+            <button id="btn-join-room" class="btn-gold-outline">ENTRAR A LA ARENA</button>
+          </div>
+        </div>
+      </div>
+
+      <p id="lobby-error" class="error-banner hidden"></p>
+    </div>
+
+    <!-- PANTALLA 1.5: SALA DE ESPERA -->
+    <div id="screen-waiting" class="luxury-panel centered-box hidden">
+      <span class="gold-tag">SALA CREADA CON ÉXITO</span>
+      <h2 class="wait-title">Comparte este código con tu rival</h2>
+      <div class="code-display-wrapper">
+        <span id="display-room-code" class="big-gold-code">----</span>
+        <button id="btn-copy-code" class="btn-copy">Copiar Código</button>
+      </div>
+      <p class="muted-text">El duelo comenzará automáticamente en cuanto tu oponente ingrese.</p>
+      <div class="gold-spinner"></div>
+      <button onclick="location.reload()" class="btn-link-muted">Cancelar y volver</button>
+    </div>
+
+    <!-- PANTALLA 2: ARENA DE JUEGO -->
+    <div id="screen-game" class="hidden">
+      <div class="scoreboard-grid">
+        <div class="stat-box player-box">
+          <span class="stat-label" id="name-p1">JUGADOR 1</span>
+          <strong class="stat-number" id="score-p1">0</strong>
+          <span class="streak-badge hidden" id="streak-p1">🔥 RACHA x2</span>
+        </div>
+
+        <div class="stat-box center-box">
+          <span class="stat-label" id="round-counter">RONDA 1 / 5</span>
+          <div class="points-value"><strong id="current-points">500</strong> PTS</div>
+          <span class="cat-tag" id="category-badge">HISTORIA</span>
+        </div>
+
+        <div class="stat-box player-box">
+          <span class="stat-label" id="name-p2">RIVAL IA</span>
+          <strong class="stat-number" id="score-p2">0</strong>
+          <span class="streak-badge hidden" id="streak-p2">🔥 RACHA x2</span>
+        </div>
+      </div>
+
+      <div class="arena-layout">
+        <!-- CARTA MISTERIOSA (?) / REVELADA -->
+        <div class="mystery-card-container">
+          <div class="mystery-card" id="mystery-card">
+            <div class="card-face card-hidden-face" id="card-face-hidden">
+              <span class="gold-tag">IDENTIDAD OCULTA</span>
+              <div class="question-emblem">?</div>
+              <p class="mystery-hint">Adivina quién es para revelar su retrato</p>
+            </div>
+
+            <div class="card-face card-revealed-face hidden" id="card-face-revealed">
+              <span class="gold-tag top-left-badge" id="rev-nickname">APODO</span>
+              <div class="portrait-wrapper">
+                <img id="rev-image" src="" alt="Personaje revelado" />
+              </div>
+              <div class="revealed-info">
+                <span class="rev-sub-tag" id="rev-nickname-sub">APODO</span>
+                <h3 id="rev-name">NOMBRE</h3>
+                <p class="rev-meta" id="rev-meta">1900 – 1980 • Disciplina</p>
+                <p class="rev-bio" id="rev-bio">Biografía...</p>
+                <div class="rev-stats-grid" id="rev-stats"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PISTAS Y RESPUESTA -->
+        <div class="clues-and-input-col">
+          <div class="luxury-panel clues-panel">
+            <div class="clues-top">
+              <h3>PISTAS REVELADAS</h3>
+              <div class="timer-controls">
+                <span>Siguiente en: <strong id="clue-timer" class="gold-text">14</strong>s</span>
+                <button id="btn-next-clue" class="btn-small-gold">Pedir pista (-100 pts)</button>
+              </div>
+            </div>
+            <ul id="clues-list" class="clues-list"></ul>
+          </div>
+
+          <div class="luxury-panel input-panel" id="box-player">
+            <div class="input-top">
+              <span>TU RESPUESTA</span>
+              <span id="penalty-timer" class="penalty-text hidden">PENALIZACIÓN: 3s</span>
+            </div>
+
+            <form id="guess-form" autocomplete="off">
+              <div class="autocomplete-box">
+                <input type="text" id="guess-input" placeholder="Escribe el nombre del personaje..." required />
+                <ul id="suggestions-list" class="suggestions-dropdown"></ul>
+              </div>
+              <button type="submit" class="btn-gold submit-btn">ADIVINAR</button>
+            </form>
+
+            <div id="wrong-guesses" class="wrong-list"></div>
+          </div>
+
+          <div id="status-banner" class="status-banner">
+            <span class="gold-dot"></span>
+            <p id="opponent-status-text">Tu oponente está analizando la pista...</p>
+          </div>
+
+          <div id="next-round-bar" class="next-round-bar hidden">
+            <div class="round-result-msg" id="round-result-msg">¡Punto ganado!</div>
+            <button id="btn-ready-next" class="btn-gold">SIGUIENTE PERSONAJE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANTALLA 3: PODIO FINAL -->
+    <div id="screen-end" class="luxury-panel centered-box hidden">
+      <span class="gold-tag">DUELO FINALIZADO</span>
+      <h2 id="final-winner-title" class="editorial-title" style="margin-top: 10px;">VICTORIA</h2>
+      <div class="final-podium">
+        <div class="stat-box">
+          <span class="stat-label" id="final-name-p1">JUGADOR 1</span>
+          <strong class="stat-number" id="final-score-p1">0</strong>
+        </div>
+        <span class="vs-gold">VS</span>
+        <div class="stat-box">
+          <span class="stat-label" id="final-name-p2">RIVAL IA</span>
+          <strong class="stat-number" id="final-score-p2">0</strong>
+        </div>
+      </div>
+      <button onclick="location.reload()" class="btn-gold" style="max-width: 320px;">VOLVER A LA ARENA</button>
+    </div>
+  </section>
+
+  <!-- REGLAS Y DISCIPLINAS -->
+  <section id="categorias" class="content-section">
+    <div class="section-header">
+      <h2 class="editorial-title">REGLAS DE LA <span>ARENA</span></h2>
+      <p class="editorial-subtitle">Seis disciplinas del conocimiento humano y pop culture disponibles.</p>
+    </div>
+
+    <div class="four-cards-grid">
+      <div class="stat-box">
+        <span class="gold-tag">Puntuación</span>
+        <strong class="stat-number">500</strong>
+        <span class="stat-label">PUNTOS EN PISTA 1</span>
+      </div>
+      <div class="stat-box">
+        <span class="gold-tag">Progresión</span>
+        <strong class="stat-number">5</strong>
+        <span class="stat-label">PISTAS POR PERSONAJE</span>
+      </div>
+      <div class="stat-box">
+        <span class="gold-tag">Penalización</span>
+        <strong class="stat-number">3s</strong>
+        <span class="stat-label">BLOQUEO POR ERROR</span>
+      </div>
+      <div class="stat-box">
+        <span class="gold-tag">Modalidad</span>
+        <strong class="stat-number">1v1</strong>
+        <span class="stat-label">ONLINE O VS IA</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUGERIR PERSONAJE -->
+  <section id="sugerir" class="content-section">
+    <div class="section-header">
+      <h2 class="editorial-title">PROPÓN UNA <span>LEYENDA</span></h2>
+      <p class="editorial-subtitle">¿Qué personaje emblemático debería entrar en la próxima actualización?</p>
+    </div>
+
+    <div class="luxury-panel suggest-box">
+      <form id="suggest-form">
+        <div class="form-row">
+          <input type="text" placeholder="Nombre del personaje (ej. Goku)" required />
+          <input type="text" placeholder="Categoría (Anime, Videojuegos, etc.)" required />
+        </div>
+        <textarea rows="3" placeholder="Escribe una pista difícil que pocos conozcan..." required></textarea>
+        <button type="submit" class="btn-gold">ENVIAR PROPUESTA</button>
+      </form>
+      <p id="suggest-thanks" class="gold-text hidden" style="margin-top: 12px; text-align: center;">
+        ¡Gracias! Tu propuesta ha sido registrada.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="brand" style="justify-content: center; margin-bottom: 10px;">
+      <div class="brand-emblem">?</div>
+      <span>WHO IS <strong>IT?</strong></span>
+    </div>
+    <p>© 2026 WHO IS IT? — Plataforma interactiva de duelos 1 vs 1.</p>
+  </footer>
+
+  <script src="/socket.io/socket.io.js" onerror="window.SOCKET_UNAVAILABLE = true;"></script>
+  <script src="app.js"></script>
+</body>
+</html>

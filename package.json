@@ -1,0 +1,13 @@
+{
+  "name": "who-is-it-online",
+  "version": "1.0.0",
+  "description": "Juego multijugador 1 vs 1 de personajes históricos, anime y videojuegos",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  }
+}
